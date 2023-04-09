@@ -1,0 +1,70 @@
+1. git init -> Inicijalizacija na novo repo (SI_2023_lab1_143150)
+2. git remote add origin https://github.com/teamiovska/SI_2023_lab1_143150.git -> za linkuvanje na local git so remote
+3. git remote -> za proverka dali lokalniot repository e povrzan so dalecniot repository
+4. git remote -v -> za proverka so koj link e povrzan
+5. git status -> za proverka dali ima nekoj novi files za commit
+6. git add README.md -> za dodadvanje na file vo git
+7. git commit -m "Initial commit" -> za commit so poraka
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+8. git config --global user.email "tea_miovska@hotmail.com" -> za dodavanje na emila vo git
+9.  git config --global user.name "Tea Miovska" -> za dodavanje na ime vo git
+10. git commit -m "Initial commit" -> za commit so poraka
+[master (root-commit) a8cf996] Initial commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+11.  git add SILab1.java -> za dodadvanje na file vo git
+12. git commit -m "Add java class" -> za commit so poraka
+[master fa439b9] Add java class
+ 1 file changed, 41 insertions(+)
+ create mode 100644 SILab1.java
+
+13. git fetch, git pull, git merge origin/master -> za sinhronizacija so oddaleceniot repository
+14.  git checkout -b bug1 master -> kreiranje na novi granki od master
+15. git checkout bug1 -> prefrlanje na granka bug1
+Switched to branch 'bug1'
+
+Ovie komandi se pravat za site 3 granki (bug1, bug2, bug3)
+16. git add SILab1.java -> za dodadvanje na file vo git
+17. git commit -m "Fix wrong loop for reading"
+[bug1 c867261] Fix wrong loop for reading
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Ovie komandi se pravat za sinhronizacija na site 3 granki poedinecno (bug1, bug2, bug3)
+18. git fetch, git pull, git merge origin/bug1 -> za sinhronizacija so oddaleceniot repository
+
+19.  git checkout master -> promena na granka
+Switched to branch 'master'
+
+Ovie komandi se pravat za merge na site 3 granki poedinecno (bug1, bug2, bug3)
+20.  git merge bug1 -> merger na drugi granki so master
+Updating fa439b9..c867261
+Fast-forward
+ SILab1.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+21. Greska merge bug2 vo master
+Merge branch 'bug2'
+# Please enter a commit message to explain why this merge is necessary,
+# especially if it merges an updated upstream into a topic branch.
+# Merge bug2 into master
+~
+~
+press i (i for insert)
+write your merge message
+press esc (escape)
+write :wq (write & quit)
+then press enter
+
+22. git rebase master bug3 -> rebase bug3 prema master
+Successfully rebased and updated refs/heads/bug3.
+
